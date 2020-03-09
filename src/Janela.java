@@ -1,3 +1,4 @@
+import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -17,6 +18,8 @@ public class Janela extends JFrame{
 	JMenuItem tabbedpane_produto = new JMenuItem("tabbedpane_produto");
 	
 	JTabbedPane tabbed_pane = new JTabbedPane();
+			
+	JDesktopPane desktop = new JDesktopPane();
 	
 	public Janela () {
 		super("Janela");
@@ -105,6 +108,14 @@ public class Janela extends JFrame{
 
 	public void setTabbed_pane(JTabbedPane tabbed_pane) {
 		this.tabbed_pane = tabbed_pane;
+	}
+
+	public JDesktopPane getDesktop() {
+		return desktop;
+	}
+
+	public void setDesktop(JDesktopPane desktop) {
+		this.desktop = desktop;
 	}
 	
 }

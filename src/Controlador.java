@@ -1,6 +1,9 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
+
 public class Controlador implements ActionListener{
 	
 	Janela janela;
@@ -40,10 +43,24 @@ public class Controlador implements ActionListener{
 			janela.validate();
 		}
 		if (janela.getInternalframe_cliente() == e.getSource()) {
+			JInternalFrame frame_cliente = new JInternalFrame("Cliente"); 
 			
+			frame_cliente.setSize(500, 500);
+			frame_cliente.setLayout(null);
+			frame_cliente.setVisible(true);
+			
+			janela.getDesktop().add(frame_cliente);
+			janela.setContentPane(janela.getDesktop());
 		}
 		if (janela.getInternalframe_produto() == e.getSource()) {
+			JInternalFrame frame_produto = new JInternalFrame("Produto"); 
 			
+			frame_produto.setSize(500, 500);
+			frame_produto.setLayout(null);
+			frame_produto.setVisible(true);
+			
+			janela.getDesktop().add(frame_produto);
+			janela.setContentPane(janela.getDesktop());
 		}
 		if (janela.getTabbedpane_cliente() == e.getSource()) {
 			
